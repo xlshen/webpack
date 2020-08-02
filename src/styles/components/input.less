@@ -1,0 +1,58 @@
+@input-prefix-cls: ant-input;
+
+.@{homestyler-prefix-cls} {
+  .@{input-prefix-cls} {
+    &:focus {
+      min-width: 140px;
+      border-color: @primary-color;
+
+      & + .@{input-prefix-cls}-group-addon {
+        border-color: @primary-color;
+      }
+    }
+
+    &[disabled] {
+      & + .@{input-prefix-cls}-group-addon {
+        color: @disabled-color;
+        background-color: @disabled-bg;
+      }
+    }
+
+    &-group-wrapper {
+      .@{input-prefix-cls} {
+        border-right: none;
+      }
+    }
+
+    &.search-input {
+      min-width: 240px;
+    }
+  }
+
+  .@{input-prefix-cls}-search {
+    min-width: 240px;
+
+    &.@{input-prefix-cls}-affix-wrapper {
+      .@{input-prefix-cls}-suffix {
+        .@{input-prefix-cls}-search-icon {
+          color: @border-color-base;
+          font-size: @font-size-lg;
+        }
+      }
+
+      .@{input-prefix-cls}:focus + .@{input-prefix-cls}-suffix {
+        .@{input-prefix-cls}-search-icon {
+          color: @primary-color;
+        }
+      }
+    }
+  }
+
+  input,
+  input:hover,
+  input:focus {
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0px 100px @white-color inset; /* stylelint-disable-line */
+    }
+  }
+}

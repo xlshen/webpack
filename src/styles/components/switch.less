@@ -1,0 +1,44 @@
+@switch-prefix-cls: ant-switch;
+
+.@{homestyler-prefix-cls} {
+  .@{switch-prefix-cls} {
+    min-width: 34px;
+    background-color: @gray-color-D;
+    border: none;
+
+    &::after {
+      top: -3px;
+      left: -1px;
+      width: 20px;
+      height: 20px;
+      background-color: @gray-color-J;
+      border: @gray-color-J;
+      box-shadow: 0 1px 1px @shadow-color-A;
+    }
+
+    &-disabled {
+      background-color: fade(@gray-color-D, 50%);
+
+      &::after {
+        // background-color: @gray-color-H;
+      }
+    }
+
+    &-checked {
+      background-color: @primary-color;
+
+      &::after {
+        left: 100%;
+        margin-left: 1px;
+      }
+
+      &.@{switch-prefix-cls}-disabled {
+        background-color: fade(@switch-color, 50%);
+
+        &::after {
+          // background-color: fade(@gray-color-J, 50%);
+        }
+      }
+    }
+  }
+}

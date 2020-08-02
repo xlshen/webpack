@@ -1,0 +1,114 @@
+@modal-prefix-cls: ant-modal;
+@confirm-prefix-cls: ant-modal-confirm;
+
+.@{homestyler-prefix-cls} {
+  .@{modal-prefix-cls} {
+    min-width: 400px;
+    min-height: 136px;
+    padding-bottom: 0;
+
+    // &.with-input-field-model {
+    //   .vertical-form-container {
+    //     .ant-form-item-with-help {
+    //       margin-bottom: 0;
+
+    //       .ant-form-explain {
+    //         margin-left: 0;
+    //       }
+    //     }
+    //   }
+    // }
+
+    // &-content {
+    //   min-height: 136px;
+    //   border-radius: @border-radius-sm;
+    //   box-shadow: @box-shadow-base;
+    //   padding: 20px 0 12px;
+    // }
+
+    &-close {
+      & + .@{modal-prefix-cls}-body {
+        padding-top: 24px;
+      }
+    }
+
+    &-header {
+      border-bottom: none;
+      padding: 24px 24px 0;
+
+      .@{modal-prefix-cls}-title {
+        font-size: @font-size-lg + 2px;
+      }
+    }
+
+    &-body {
+      padding: 10px 24px 0;
+
+      &:empty {
+        padding-top: 0;
+      }
+    }
+
+    &-footer {
+      border-top: none;
+      padding: 24px;
+
+      .ant-btn {
+        margin-left: @padding-md;
+      }
+    }
+  }
+
+  .@{confirm-prefix-cls} {
+    .@{modal-prefix-cls}-body {
+      padding: @padding-lg;
+
+      .anticon + .ant-modal-confirm-title + .ant-modal-confirm-content {
+        margin: 0;
+      }
+    }
+
+    &-body {
+      .anticon-question-circle,
+      .anticon-info-circle {
+        display: none;
+      }
+    }
+
+    &-title {
+      font-size: @font-size-lg + 2px;
+    }
+
+    &-content:not(:empty) {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    &-title:empty + .@{confirm-prefix-cls}-content {
+      margin-top: 0;
+    }
+
+    &-btns {
+      button + button {
+        margin-left: @padding-md;
+      }
+    }
+
+    &-info,
+    &-success,
+    &-error,
+    &-warning {
+      .@{confirm-prefix-cls}-btns {
+        .ant-btn {
+          min-width: 0;
+          height: auto;
+          line-height: @line-height-base;
+          color: @blue-color;
+          background: @white-color;
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+  }
+}

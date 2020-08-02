@@ -1,0 +1,111 @@
+.@{homestyler-prefix-cls} {
+  .ant-btn {
+    min-width: 88px;
+    padding: 0 @padding-md + 5px;
+    font-size: @font-size-base;
+    line-height: @font-size-base * 2 + 2px;
+    text-shadow: none;
+
+    &-primary {
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: @primary-color;
+        background-color: @primary-color;
+      }
+
+      &[disabled] {
+        color: @white-color;
+        border-color: @blue-light-color;
+        background-color: @blue-light-color;
+        &:hover,
+        &:active,
+        &:focus {
+          color: @white-color;
+          border-color: @blue-light-color;
+          background-color: @blue-light-color;
+        }
+      }
+    }
+
+    &-danger {
+      &:hover,
+      &:active,
+      &:focus {
+        border-color: @red-color-B;
+        background-color: @red-color-B;
+      }
+
+      &[disabled] {
+        color: @white-color;
+        border-color: @red-color-C;
+        background-color: @red-color-C;
+      }
+    }
+
+    &-danger-secondary {
+      color: @btn-danger-bg;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: @btn-danger-bg;
+        border-color: @btn-danger-bg;
+      }
+    }
+
+    &-lg {
+      min-width: 120px;
+      font-size: @font-size-lg;
+      line-height: @font-size-lg * 2.5;
+    }
+
+    &-sm {
+      min-width: 60px;
+      font-size: @font-size-sm;
+      line-height: @font-size-sm * 2;
+    }
+
+    &-circle {
+      padding: 0;
+    }
+
+    .iconfont:not(:only-child):first-child {
+      margin-right: 5px;
+    }
+
+    &.ant-dropdown-trigger {
+      .anticon-caret-down {
+        position: relative;
+        font-size: @font-size-sm;
+        left: 10px;
+      }
+    }
+
+    &-link[href] {
+      color: @blue-color;
+      border: none;
+
+      &[disabled] {
+        color: @disabled-color;
+        background: none;
+      }
+    }
+  }
+
+  .standard-button-like-link {
+    width: auto;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: @primary-color;
+    background: 0 0;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease;
+    border: none;
+    padding: 4px 8px;
+    font-size: @font-size-base;
+  }
+}

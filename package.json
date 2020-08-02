@@ -1,0 +1,67 @@
+{
+  "name": "homestyler",
+  "module": "src/lib.js",
+  "main": "build/homestyler.js",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/runtime": "^7.11.0",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@types/jest": "^26.0.8",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "antd": "^4.5.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.1",
+    "typescript": "^3.9.7"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "publish": "node publish.js",
+    "build-library": "react-app-rewired build --library",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "autoprefixer": "^9.8.6",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^4.2.0",
+    "customize-cra": "^1.0.0",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "less": "^3.12.2",
+    "less-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "react-app-rewire-create-react-library": "^0.1.1",
+    "react-app-rewired": "^2.1.6",
+    "webpack-bundle-analyzer": "^3.8.0"
+  }
+}

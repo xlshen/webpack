@@ -1,0 +1,39 @@
+@tabs-prefix: ant-tabs;
+
+.@{homestyler-prefix-cls} {
+  .@{tabs-prefix} {
+    overflow: unset;
+
+    &-bar {
+      color: @text-color-secondary;
+      margin-bottom: @padding-sm;
+
+      .@{tabs-prefix}-nav-container {
+        line-height: 48px;
+      }
+    }
+
+    &-nav {
+      .@{tabs-prefix}-tab {
+        padding: 0;
+        margin-right: 32px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          color: @primary-color;
+        }
+      }
+
+      .@{tabs-prefix}-tab-active {
+        color: @primary-color;
+      }
+    }
+
+    &-ink-bar {
+      background-color: @primary-color;
+    }
+  }
+}

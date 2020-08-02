@@ -1,0 +1,18 @@
+@alert-prefix-cls: ant-alert;
+@alert-message-prefix-cls: ant-alert-message;
+
+.@{homestyler-prefix-cls} {
+  .@{alert-prefix-cls} {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: @padding-sm;
+
+    &-icon {
+      top: 6px + @font-size-base * @line-height-base / 2 - @font-size-base / 2;
+    }
+
+    &-close-icon {
+      top: 6px;
+    }
+  }
+}

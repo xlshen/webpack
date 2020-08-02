@@ -1,0 +1,34 @@
+@radio-prefix: ant-radio;
+
+.@{homestyler-prefix-cls} {
+  .@{radio-prefix} {
+    &-checked {
+      .@{radio-prefix}-inner {
+        border-color: @primary-color;
+      }
+    }
+
+    &-inner {
+      &::after {
+        background-color: @primary-color;
+      }
+    }
+
+    &-disabled {
+      .@{radio-prefix}-inner {
+        background-color: @white-color;
+        border-color: fade(@primary-color, 50%) !important;
+
+        &::after {
+          background-color: fade(@primary-color, 50%);
+        }
+      }
+    }
+  }
+
+  .@{radio-prefix}-wrapper:hover .@{radio-prefix},
+  .@{radio-prefix}:hover .@{radio-prefix}-inner,
+  .@{radio-prefix}-input:focus + .@{radio-prefix}-inner {
+    border-color: @primary-color;
+  }
+}
